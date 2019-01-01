@@ -54,6 +54,19 @@ class UniVal{
 		count.c++;
 		return true;
 	}
+	public boolean uniCountChecker(TreeNode root)
+	{
+		boolean left,right;
+		if(root==null) return true;
+		left = uniCountChecker(root.left);
+		right = uniCountChecker(root.right);
+
+		if(left!=true||right!=true)return false;
+		if(root.left!=null && root.val!=root.left.val)return false;
+		if(root.right!=null && root.val!=root.right.val)return false;
+
+		return true;
+	}
 	public static void main(String[] a)
 	{
 		UniVal tree = new UniVal();
@@ -62,8 +75,9 @@ class UniVal{
 		tree.root.right = new TreeNode(1); 
 		tree.root.left.left = new TreeNode(1); 
 		tree.root.left.right = new TreeNode(1); 
-		tree.root.right.left = new TreeNode(2); 
+		tree.root.right.left = new TreeNode(1); 
       	tree.root.right.right = new TreeNode(1);
       	System.out.println(tree.uniCount(root));
+      	System.out.println(tree.uniCountChecker(root));
 	}
 }
