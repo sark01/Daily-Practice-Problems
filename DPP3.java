@@ -51,7 +51,7 @@ public class DPP3
 	}
 	//This method stores the preorder traversal of a tree in String.
 	//Similar method can be used for storing the traversal in a file.
-	//Use of StringBuilder is done to create a mutable object, ie to reuse the same instance of the oboject again.
+	//Use of StringBuilder is done to create a mutable object, ie to reuse the same instance of the object again.
 	public static String serialise(TreeNode root)
 	{
 		if(root==null)
