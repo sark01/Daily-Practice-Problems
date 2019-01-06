@@ -8,7 +8,7 @@ This problem was asked by Google.
 
 Given the root to a binary tree, implement serialize(root), which serializes the tree into a string, and deserialize(s), which deserializes the string back into the tree.
 
-For example, given the following Node class
+For example, given the following Node class -
 
 class Node:
     def __init__(self, val, left=None, right=None):
@@ -49,9 +49,9 @@ public class DPP3
 		System.out.println(s);
 		inorder(deserialise(s));
 	}
-	//This method stores the preorder traversal of a tree in String
-	//Similar method can be used for sotring the traversal in a file
-	//Use of StringBuilder is done to create a mutable object, ie to reuse the same instanc eof the oboject again
+	//This method stores the preorder traversal of a tree in String.
+	//Similar method can be used for storing the traversal in a file.
+	//Use of StringBuilder is done to create a mutable object, ie to reuse the same instance of the object again.
 	public static String serialise(TreeNode root)
 	{
 		if(root==null)
@@ -68,7 +68,7 @@ public class DPP3
 		String[] str = s.split(",");
 		return deserialiseHelper(str,new int[]{0});
 	}
-	//tried implementing using a global static variable but the tree formed was incorrect.
+	//Tried implementing using a global static variable but the tree formed was incorrect.
 	public static TreeNode deserialiseHelper(String[] str,int[] num)
 	{
 		if(num[0]>str.length||str[num[0]].equals("null"))
